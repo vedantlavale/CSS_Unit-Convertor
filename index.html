@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>StyleFeline</span>
+        </div>
+        <div class="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
+            <div class="menu-content">
+                <a href="https://www.linkedin.com/in/vedant-lavale-78105a281/" target="_blank">🔗 LinkedIn</a>
+                <a href="https://twitter.com/_vedant_20_" target="_blank">🐦 Twitter</a>
+                <a href="https://github.com/vedantlavale" target="_blank">🐙 GitHub</a>
+                <a href="mailto:vedantlavale@gmail.com">📧 Email</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1>CSS Units Converter</h1>
+        <p>A converter that calculates various CSS units to make the measurement responsive</p>
+        <div class="converter">
+            <div class="input-group">
+                <label for="input-value">Value:</label>
+                <input type="number" id="input-value" placeholder="Enter value" oninput="convertUnits()">
+            </div>
+            <div class="input-group">
+                <label for="input-unit">From:</label>
+                <select id="input-unit" onchange="convertUnits()">
+                    <option value="px">Pixels (px)</option>
+                    <option value="em">Ems (em)</option>
+                    <option value="rem">Rems (rem)</option>
+                    <option value="vw">Viewport Width (vw)</option>
+                    <option value="vh">Viewport Height (vh)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="output-unit">To:</label>
+                <select id="output-unit" onchange="convertUnits()">
+                    <option value="px">Pixels (px)</option>
+                    <option value="em">Ems (em)</option>
+                    <option value="rem">Rems (rem)</option>
+                    <option value="vw">Viewport Width (vw)</option>
+                    <option value="vh">Viewport Height (vh)</option>
+                </select>
+            </div>
+            <div class="result">
+                <h2>Result:</h2>
+                <p id="output-value">0</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
